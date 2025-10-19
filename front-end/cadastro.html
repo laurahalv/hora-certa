@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forms.css">
+    <title>Cadastre-se</title>
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+            <div class="items">
+            <img src="../prototipos/logo.png" alt="Logo">
+            <h1>Hora Certa</h1>
+            <p>Seu controle de medicamentos inteligente</p>
+            </div>
+        </div>
+        <div class="form">
+            <h1>Criar uma Conta</h2>
+            <form action="/registrar" method="POST">
+                <label for="name">Nome Completo</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Endereço de e-mail</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Senha (mínimo de 6 caracteres)</label>
+                <input type="password" id="password" name="password" required minlength="6">
+
+                <label for="confirm_password">Confirmar Senha</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+
+                <button type="submit">Criar conta</button>
+            </form>
+            <p>Já tem uma conta? <a href="login.html">Entre aqui</a></p>
+        </div>
+    </div>
+
+    
+</body>
+</html>
