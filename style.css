@@ -1,0 +1,124 @@
+*{
+    font-family: "Special Gothic", sans-serif;
+}
+body{
+    margin: 0;
+    height: 110vh;
+}
+/* PROPRIEDADESE DA NAV */
+.navigation-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #1C279C;
+    height: 105px;
+    width: 100%;
+    color: white;
+}
+.nav-title{
+    width: 200px;
+}
+.logo{
+    margin-top: 5px;
+    margin-left: 70px;
+    height: 100px;
+}
+.nav-title{
+    margin-left: 50px;
+}
+.menu{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 70%;
+    gap: 20px;
+}a{
+    color: white;   
+    text-decoration: none;
+}.perfil{
+    height: 70px;
+}
+
+
+/* MAIN SECTION */
+.principal{
+    background-color: #3A6D8C;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.text-w-image{
+    margin-top: 100px;
+    background-color: #061521;
+    height: 340px;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}.card-text{
+    width: 450px;
+    font-size: large;
+     margin-left: 20px;
+}
+
+
+
+/* CARDS */
+.card-container{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 70px;
+}
+.principal-card{
+    background-color: white;
+    height: 350px;
+    width: 300px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+#hangout-img{
+    height: 250px;
+    border-radius: 150px;
+}
+.text-card{
+    color: #ffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    margin-top: 30px;
+}
+.content-img{
+    height: 70px;
+    width: 70px;
+}
+.content-p{
+    font-size: large;
+    text-align: center;
+    width: 230px;
+}
+
+
+
+
+/* RODAPE */
+.rodape{
+    background-color: #1C279C;
+    color: white;
+    height: 100px;
+    display: flex;
+}
+.rodape-texto{
+    margin-top: 10px;
+    margin-left: 160px;
+}
