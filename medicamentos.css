@@ -1,0 +1,213 @@
+body{
+    margin: 0;
+    background-color: #edede9;
+}
+*{
+    font-family: "Special Gothic", sans-serif;
+}
+
+
+
+/* NAV */
+.navigation-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #1C279C;
+    height: 105px;
+    width: 100%;
+    color: white;
+}
+.nav-title{
+    width: 200px;
+}
+.logo{
+    margin-top: 5px;
+    margin-left: 70px;
+    height: 100px;
+}
+.nav-title{
+    margin-left: 50px;
+}
+.menu{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 70%;
+    gap: 20px;
+}a{
+    color: white;   
+    text-decoration: none;
+}.perfil{
+    height: 70px;
+}
+
+
+
+/* PARTE PRINCIPAL */
+
+.principal{
+    background-color: #edede9;
+    height: 130vh;
+    width: 90%;
+}
+.principal-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botao-agendar-med{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    width: 410px;
+}.botao-agendar{
+    color: white;
+    background-color: #282E6E;
+    width: 200px;
+    height: 60px;
+    font-size: 17px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+.botao-agendar:hover {
+    cursor: pointer;
+  background-color: #3A45A0; /* Azul um pouco mais claro */
+}
+
+.card-container{
+    margin-top: 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.cardG{
+    height: 330px;
+    width: 600px;
+    border: solid 1px black;
+    border-radius: 20px;
+}#caution-card{
+    display: flex;
+    flex-direction: column;
+    background-color: #EBC692;
+}.caution-p{
+    font-size: 20px;
+    margin: 0;
+}#losartana-p{
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 0;
+}#horario{
+    font-weight: 500;
+}
+
+.card{
+    height: 330px;
+    width: 500px;
+    border: solid 1px black;
+    border-radius: 20px;
+}
+.titulo-container{
+    display: flex;
+
+}.logos-img{
+    margin-left: 10px;
+    margin-top: 20px;
+    height: 30px;
+    width: 30px;
+}
+.img-container{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+.baseline-text-container{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.cardg-title{
+    margin-left: 15px;
+    font-size: 20px;
+}
+.card-content{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.p-generico{
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: #D9D9D9;
+    height: 60px;
+    width: 350px;
+}#content-p{
+    font-weight: 500;
+    margin: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#p-c{
+    margin: 0;
+    margin-left: 10px;
+    
+    color: #978D8D;
+}
+.container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.caution-content{
+    border-radius: 10px;
+    background-color: #F2E9E9;
+    display: flex;
+    height: 150px;
+    width: 370px;
+}
+.p-informativo{
+    margin-left: 15px;
+}
+.caution-check{
+    color: white;
+    background-color: #68A874;
+    width: 200px;
+    height: 60px;
+    font-size: 17px;
+    border-radius: 10px;
+    border: black 1px solid;
+    margin-top: 20px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
+}
+.caution-check:hover{
+    cursor: pointer;
+  background-color: #5A9565;
+}
+
+
+/* RODAPE */
+.rodape{
+    background-color: #1C279C;
+    color: white;
+    height: 100px;
+    display: flex;
+}
+.rodape-texto{
+    margin-top: 10px;
+    margin-left: 160px;
+}
+
+
+
