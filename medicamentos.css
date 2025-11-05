@@ -195,9 +195,34 @@ body{
     cursor: pointer;
   background-color: #5A9565;
 }
+.table-container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.table-row, .table-row-below {
+    text-align: center;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas iguais */
+    border-bottom: 1px solid black;
+}
 
 
-/* RODAPE */
+.table-row-below {
+    font-size: 12px;
+    height: 50px;
+    width: 450px;
+    margin-left: 20px;
+    border-bottom: none; /* opcional */
+}
+#nao-tomado{
+    font-weight: 500;
+    background-color: #D9D9D9;
+    height: 20px;
+    border: solid 1px #D9D9D9;
+    border-radius: 10px;
+}
 .rodape{
     background-color: #1C279C;
     color: white;
