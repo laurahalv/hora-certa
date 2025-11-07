@@ -89,7 +89,7 @@ body{
 }
 .cardG{
     height: 330px;
-    width: 600px;
+    width: 500px;
     border: solid 1px black;
     border-radius: 20px;
 }#caution-card{
@@ -206,6 +206,20 @@ body{
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5 colunas iguais */
     border-bottom: 1px solid black;
+}
+.dependent-check{
+    background-color: #282E6E;
+        color: white;
+    width: 200px;
+    height: 60px;
+    font-size: 17px;
+    border-radius: 10px;
+    border: black 1px solid;
+    margin-top: 20px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
+}.dependent-check:hover{
+    cursor: pointer;
+  background-color: #3A45A0;
 }
 
 
