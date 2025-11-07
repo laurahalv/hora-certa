@@ -6,8 +6,6 @@ body{
     font-family: "Special Gothic", sans-serif;
 }
 
-
-
 /* NAV */
 .navigation-bar{
     display: flex;
@@ -81,8 +79,6 @@ body{
     margin-top: 50px;
     height: 100vh;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 30px;

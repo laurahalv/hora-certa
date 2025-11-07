@@ -1,155 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medicamentos</title>
-    <link rel="stylesheet" href="/frontend/assets/css/medicamentos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Special+Gothic:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/assets/css/medicamentos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Gothic:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
 
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
-</head>
-<body>
-        <nav class="navigation-bar">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gotu&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navigation-bar">
         <div class="nav-logo">
-            <img class="logo" src="/frontend/assets/images/horacerta-logo.png" alt="logo-pilula-medicamento">
+          <img
+            class="logo"
+            src="/frontend/assets/images/horacerta-logo.png"
+            alt="logo-pilula-medicamento"
+          />
         </div>
 
         <div class="nav-title">
-            <h2 style="margin-bottom: 5px;">Hora Certa</h2>
-            <p style="margin-top: 0;">Seu controle de<br> medicamentos inteligente</p>
+          <h2 style="margin-bottom: 5px">Hora Certa</h2>
+          <p style="margin-top: 0">
+            Seu controle de<br />
+            medicamentos inteligente
+          </p>
         </div>
 
         <div class="menu">
-            <td>
-                <tr><a href="/frontend/assets/pages/home.html">Inicio</a></tr>
-                <tr><a href="/frontend/assets/pages/medicamentos.html">Medicamentos</a></tr>
-                <tr><a href="medicamentos.html">Dependentes</a></tr>
-                <tr><a href="/frontend/assets/pages/notificacoes.html">Notificações</a></tr>
-            </td>
-            <img class="perfil" src="/frontend/assets/images/perfil.png" alt="">
+          <td>
+            <tr>
+              <a href="/frontend/assets/pages/home.html">Inicio</a>
+            </tr>
+            <tr>
+              <a href="/frontend/assets/pages/medicamentos.html"
+                >Medicamentos</a
+              >
+            </tr>
+            <tr>
+              <a href="medicamentos.html">Dependentes</a>
+            </tr>
+            <tr>
+              <a href="/frontend/assets/pages/notificacoes.html"
+                >Notificações</a
+              >
+            </tr>
+          </td>
+          <img class="perfil" src="/frontend/assets/images/perfil.png" alt="" />
         </div>
-    </nav>
+      </nav>
+    </header>
 
     <main class="principal-container">
-        
-        <div class="principal">
-                            
-            <section class="cards-informativos">
+      <div class="principal">
+        <section class="cards-informativos">
+          <div class="botao-agendar-med">
+            <button class="botao-agendar" style="align-self: flex-start">
+              <strong>+</strong> Agendar Medicamento
+            </button>
+          </div>
 
-                <div class="botao-agendar-med">
-                    <button class="botao-agendar" style="align-self:flex-start;">Agendar Medicamento</button>
+          <div class="card-container">
+            <div class="cardG">
+              <div class="titulo-container">
+                <img
+                  class="logos-img"
+                  src="/frontend/assets/images/relogio.png"
+                  alt=""
+                />
+                <p class="cardg-title">Próximos Medicamentos</p>
+              </div>
+
+              <div class="img-container">
+                <img
+                  class="medicamento-img"
+                  src="/frontend/assets/images/medicamento.png"
+                  alt="mediacamento"
+                />
+              </div>
+
+              <div class="baseline-text-container">
+                <p class="cardg-title">Nenhum Medicamento Agendado</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="titulo-container">
+                <img
+                  class="logos-img"
+                  src="/frontend/assets/images/dependentes.png"
+                  alt=""
+                />
+                <p class="cardg-title">Dependentes</p>
+              </div>
+
+              <div class="card-content">
+                <div class="p-generico">
+                  <p id="content-p">João Silva</p>
+                  <p id="p-c">Filho</p>
                 </div>
-                
-                <div class="card-container">
-                        
-                    <div class="cardG">
-                        <div class="titulo-container">
-                            <img class="logos-img" src="/frontend/assets/images/relogio.png" alt="">
-                            <p class="cardg-title">Próximos Medicamentos</p>
-                        </div>
 
-                        <div class="img-container">
-                            <img class="medicamento-img" src="/frontend/assets/images/medicamento.png" alt="mediacamento">
-                        </div>
+                <div class="p-generico">
+                  <p id="content-p">Ana Silva</p>
+                  <p id="p-c">Filha</p>
+                </div>
+                <button class="dependent-check">Adicionar Dependentes</button>
+              </div>
+            </div>
+            <div id="caution-card" class="cardG">
+              <div class="titulo-container">
+                <img
+                  class="logos-img"
+                  src="/frontend/assets/images/caution.png"
+                  alt=""
+                />
+                <p class="cardg-title">Medicamentos não tomados (1)</p>
+              </div>
 
-                        <div class="baseline-text-container">
-                            <p class="cardg-title">Nenhum Medicamento Agendado</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="titulo-container">
-                            <img class="logos-img" src="/frontend/assets/images/dependentes.png" alt="">
-                            <p class="cardg-title">Dependentes</p>
-                        </div>
+              <div class="container">
+                <div class="caution-content">
+                  <div class="p-informativo">
+                    <p id="losartana-p">Losartana</p>
+                    <p class="caution-p">Dose: 50mg</p>
+                    <p class="caution-p">Para: Ana Silva<br /></p>
+                    <p id="horario" class="caution-p">Horário: 13:00</p>
+                  </div>
+                </div>
+                <button class="caution-check">Marcar como tomado</button>
+              </div>
+            </div>
+            <div class="card">
+              <div class="titulo-container">
+                <img
+                  class="logos-img"
+                  src="/frontend/assets/images/relogiologo.png"
+                  alt=""
+                />
+                <p class="cardg-title">Histórico</p>
+              </div>
 
-                        <div class="card-content">
-                            <div class="p-generico">
-                                <p id="content-p">João Silva</p>
-                                <p id="p-c">Filho</p>
-                            </div>
+              <div class="table-container">
+                <div class="table-row">
+                  <p>Medicamentos</p>
+                  <p>Dose</p>
+                  <p>Pessoa</p>
+                  <p>Horário</p>
+                  <p>Status</p>
+                </div>
 
-                            <div class="p-generico">
-                                <p id="content-p">Ana Silva</p>
-                                <p id="p-c">Filha</p>
-                            </div>
-                            <button class="dependent-check">Adicionar Dependentes</button>
-                        </div>
-                            
-                    </div>
-                    <div id="caution-card" class="cardG">
-                        <div class="titulo-container">
-                            <img class="logos-img" src="/frontend/assets/images/caution.png" alt="">
-                            <p class="cardg-title">Medicamentos não tomados (1)</p>
-                        </div>
+                <div class="table-row-below">
+                  <p>Vitamina</p>
+                  <p>D1000 UI</p>
+                  <p>Ana Silva</p>
+                  <p>09:00</p>
+                  <p id="nao-tomado">X Não Tomado</p>
+                </div>
 
-                        <div class="container">
-                            <div class="caution-content">
-                            <div class="p-informativo">
-                                <p id="losartana-p">Losartana</p>
-                                <p class="caution-p">Dose: 50mg</p>
-                                <p class="caution-p">Para: Ana Silva<br></p>
-                                <p id="horario" class="caution-p">Horário: 13:00</p>
-                            </div>
-                        </div>
-                        <button class="caution-check">Marcar como tomado</button>
-                        </div>
-                        
-                    </div>
-                    <div class="card">
-                        <div class="titulo-container">
-                            <img class="logos-img" src="/frontend/assets/images/relogiologo.png" alt="">
-                            <p class="cardg-title">Histórico</p>
-                        </div>
-
-                        <div class="table-container">
-                        
-                                <div class="table-row">
-                    
-                                    <p>Medicamentos</p>
-                                    <p>Dose</p>
-                                    <p>Pessoa</p>
-                                    <p>Horário</p>
-                                    <p>Status</p>
-                                </div>
-
-                                <div class="table-row-below">
-
-                                    <p>Vitamina</p>
-                                    <p>D1000 UI</p>
-                                    <p>Ana Silva</p>
-                                    <p>09:00</p>
-                                    <p id="nao-tomado">X Não Tomado</p>
-                                
-                                </div>
-
-                                <div id="table-self" class="table-row-below">
-                                    <p>Losartana</p>
-                                    <p>50mg</p>
-                                    <p>Ana Silva</p>
-                                    <p>13:00</p>
-                                    <p id="nao-tomado" style="text-align: center;">Tomado</p>
-                                </div>
-                            
-                        </div>
-                    </div>
-                 </div>
-            
-            </section>
-
-        </div>
+                <div id="table-self" class="table-row-below">
+                  <p>Losartana</p>
+                  <p>50mg</p>
+                  <p>Ana Silva</p>
+                  <p>13:00</p>
+                  <p id="nao-tomado" style="text-align: center">Tomado</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
     <footer class="rodape">
-            <div class="rodape-texto">
-                <p>Hora Certa © 2025 | Política de Privacidade </p>
-            </div>
-            
-        </footer>
-
-</body>
+      <div class="rodape-texto">
+        <p>Hora Certa © 2025 | Política de Privacidade</p>
+      </div>
+    </footer>
+  </body>
 </html>
