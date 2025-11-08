@@ -28,15 +28,16 @@
             src="/frontend/assets/images/horacerta-logo.png"
             alt="logo-pilula-medicamento"
           />
-        </div>
-
-        <div class="nav-title">
+           <div class="nav-title">
           <h2 style="margin-bottom: 5px">Hora Certa</h2>
           <p style="margin-top: 0">
             Seu controle de<br />
             medicamentos inteligente
           </p>
         </div>
+        </div>
+
+       
 
         <div class="menu">
           <td>
@@ -72,8 +73,8 @@
           </div>
 
           <div class="card-container">
-            <div class="cardG">
-              <div class="titulo-container">
+            <div class="card">
+               <div class="titulo-container">
                 <img
                   class="logos-img"
                   src="/frontend/assets/images/relogio.png"
@@ -81,21 +82,19 @@
                 />
                 <p class="cardg-title">Próximos Medicamentos</p>
               </div>
-
-              <div class="img-container">
+               <div class="img-container">
                 <img
                   class="medicamento-img"
                   src="/frontend/assets/images/medicamento.png"
                   alt="mediacamento"
                 />
               </div>
-
               <div class="baseline-text-container">
                 <p class="cardg-title">Nenhum Medicamento Agendado</p>
               </div>
             </div>
             <div class="card">
-              <div class="titulo-container">
+               <div class="titulo-container">
                 <img
                   class="logos-img"
                   src="/frontend/assets/images/dependentes.png"
@@ -117,8 +116,8 @@
                 <button class="dependent-check">Adicionar Dependentes</button>
               </div>
             </div>
-            <div id="caution-card" class="cardG">
-              <div class="titulo-container">
+            <div class="card">
+               <div class="titulo-container">
                 <img
                   class="logos-img"
                   src="/frontend/assets/images/caution.png"
@@ -138,6 +137,46 @@
                 </div>
                 <button class="caution-check">Marcar como tomado</button>
               </div>
+            </div>  
+            <div class="card">
+               <div class="titulo-container">
+                <img
+                  class="logos-img"
+                  src="/frontend/assets/images/relogiologo.png"
+                  alt=""
+                />
+                <p class="cardg-title">Histórico</p>
+              </div>
+
+              <div class="table-container">
+                <div class="table-row">
+                  <p>Medicamentos</p>
+                  <p>Dose</p>
+                  <p>Pessoa</p>
+                  <p>Horário</p>
+                  <p>Status</p>
+                </div>
+
+                <div class="table-row-below">
+                  <p>Vitamina</p>
+                  <p>D1000 UI</p>
+                  <p>Ana Silva</p>
+                  <p>09:00</p>
+                  <p id="nao-tomado">X Não Tomado</p>
+                </div>
+
+                <div id="table-self" class="table-row-below">
+                  <p>Losartana</p>
+                  <p>50mg</p>
+                  <p>Ana Silva</p>
+                  <p>13:00</p>
+                  <p id="nao-tomado" style="text-align: center">Tomado</p>
+                </div>
+              </div>
+
+            </div>
+            <!-- <div class="cardG">
+    
             </div>
             <div class="card">
               <div class="titulo-container">
@@ -174,7 +213,7 @@
                   <p id="nao-tomado" style="text-align: center">Tomado</p>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </section>
       </div>
