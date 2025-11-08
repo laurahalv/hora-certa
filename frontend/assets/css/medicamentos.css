@@ -1,248 +1,365 @@
-body{
-    margin: 0;
-    background-color: #edede9;
-}
-*{
-    font-family: "Special Gothic", sans-serif;
-}
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Special Gothic", sans-serif;
+    }
 
-/* NAV */
-.navigation-bar{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: #1C279C;
-    height: 105px;
-    width: 100%;
-    color: white;
-}
-.nav-title{
-    width: 200px;
-}
-.logo{
-    margin-top: 5px;
-    margin-left: 70px;
-    height: 100px;
-}
-.nav-title{
-    margin-left: 50px;
-}
-.menu{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    width: 70%;
-    gap: 20px;
-}a{
-    color: white;   
-    text-decoration: none;
-}.perfil{
-    height: 70px;
-}
+    body {
+      background-color: #edede9;
+    }
 
+    /* NAVEGAÇÃO */
+    .navigation-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #1C279C;
+      padding: 15px 20px;
+      color: white;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
 
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
 
-/* PARTE PRINCIPAL */
+    .logo {
+      height: 80px;
+      width: auto;
+    }
 
-.principal{
-    background-color: #edede9;
-    height: 130vh;
-    width: 90%;
-}
-.principal-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .nav-title h2 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
 
-.botao-agendar-med{
-    display: flex;
-    justify-content: center;
-    margin: 50px;
-    width: 410px;
-}.botao-agendar{
-    color: white;
-    background-color: #282E6E;
-    width: 200px;
-    height: 60px;
-    font-size: 17px;
-    border-radius: 10px;
-    outline: none;
-    border: none;
-}
-.botao-agendar:hover {
-    cursor: pointer;
-  background-color: #3A45A0; /* Azul um pouco mais claro */
-}
+    .nav-title p {
+      font-size: 0.9rem;
+      line-height: 1.3;
+    }
 
-.card-container{
-    margin-top: 50px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-.cardG{
-    height: 330px;
-    width: 500px;
-    border: solid 1px black;
-    border-radius: 20px;
-}#caution-card{
-    display: flex;
-    flex-direction: column;
-    background-color: #EBC692;
-}.caution-p{
-    font-size: 20px;
-    margin: 0;
-}#losartana-p{
-    font-weight: 500;
-    font-size: 20px;
-    margin-bottom: 0;
-}#horario{
-    font-weight: 500;
-}
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-.card{
-    height: 330px;
-    width: 500px;
-    border: solid 1px black;
-    border-radius: 20px;
-}
-.titulo-container{
-    display: flex;
+    .menu nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-}.logos-img{
-    margin-left: 10px;
-    margin-top: 20px;
-    height: 30px;
-    width: 30px;
-}
-.img-container{
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-}
-.baseline-text-container{
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-}
-.cardg-title{
-    margin-left: 15px;
-    font-size: 20px;
-}
-.card-content{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
+    .menu a {
+      color: white;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
 
-.p-generico{
-    border-radius: 10px;
-    font-size: 15px;
-    background-color: #D9D9D9;
-    height: 60px;
-    width: 350px;
-}#content-p{
-    font-weight: 500;
-    margin: 5px;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-#p-c{
-    margin: 0;
-    margin-left: 10px;
-    
-    color: #978D8D;
-}
-.container{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.caution-content{
-    border-radius: 10px;
-    background-color: #F2E9E9;
-    display: flex;
-    height: 150px;
-    width: 370px;
-}
-.p-informativo{
-    margin-left: 15px;
-}
-.caution-check{
-    color: white;
-    background-color: #68A874;
-    width: 200px;
-    height: 60px;
-    font-size: 17px;
-    border-radius: 10px;
-    border: black 1px solid;
-    margin-top: 20px;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
-}
-.caution-check:hover{
-    cursor: pointer;
-  background-color: #5A9565;
-}
-.table-container {
-    width: 95%;
-    margin: 0 auto;
-}
+    .menu a:hover {
+      opacity: 0.8;
+    }
 
-.table-row, .table-row-below {
-    text-align: center;
-    gap: 10px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 colunas iguais */
-    border-bottom: 1px solid black;
-}
-.dependent-check{
-    background-color: #282E6E;
-        color: white;
-    width: 200px;
-    height: 60px;
-    font-size: 17px;
-    border-radius: 10px;
-    border: black 1px solid;
-    margin-top: 20px;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
-}.dependent-check:hover{
-    cursor: pointer;
-  background-color: #3A45A0;
-}
+    .perfil {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+    }
 
+    /* CONTEÚDO PRINCIPAL */
+    .principal-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
 
-.table-row-below {
-    font-size: 12px;
-    height: 50px;
-    width: 450px;
-    margin-left: 20px;
-    border-bottom: none; /* opcional */
-}
-#nao-tomado{
-    font-weight: 500;
-    background-color: #D9D9D9;
-    height: 20px;
-    border: solid 1px #D9D9D9;
-    border-radius: 10px;
-}
-.rodape{
-    background-color: #1C279C;
-    color: white;
-    height: 100px;
-    display: flex;
-}
-.rodape-texto{
-    margin-top: 10px;
-    margin-left: 160px;
-}
+    .principal {
+      width: 100%;
+      max-width: 1400px;
+    }
 
+    .botao-agendar-med {
+      display: flex;
+      justify-content: left;
+      margin: 30px 0;
+    }
 
+    .botao-agendar {
+      color: white;
+      background-color: #282E6E;
+      padding: 15px 30px;
+      font-size: 17px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
 
+    .botao-agendar:hover {
+      background-color: #3A45A0;
+    }
+
+    /* CARDS */
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 30px;
+      width: 100%;
+    }
+
+    .card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 20px;
+      min-height: 330px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .titulo-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .logos-img {
+      height: 30px;
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    .cardg-title {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    .img-container {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .medicamento-img {
+      max-width: 100px;
+    }
+
+    .baseline-text-container {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+
+    /* DEPENDENTES */
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      flex: 1;
+    }
+
+    .p-generico {
+      background-color: #D9D9D9;
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+    #content-p {
+      font-weight: 500;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+
+    #p-c {
+      color: #978D8D;
+      font-size: 0.9rem;
+    }
+
+    .dependent-check {
+      background-color: #282E6E;
+      color: white;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid black;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: auto;
+    }
+
+    .dependent-check:hover {
+      background-color: #3A45A0;
+    }
+
+    /* MEDICAMENTOS NÃO TOMADOS */
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      flex: 1;
+    }
+
+    .caution-content {
+      background-color: #F2E9E9;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .p-informativo p {
+      margin: 5px 0;
+    }
+
+    #losartana-p {
+      font-weight: 500;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .caution-p {
+      font-size: 1rem;
+    }
+
+    .caution-check {
+      background-color: #68A874;
+      color: white;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid black;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
+      width: 100%;
+      margin-top: auto;
+    }
+
+    .caution-check:hover {
+      background-color: #5A9565;
+    }
+
+    /* HISTÓRICO */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .table-row,
+    .table-row-below {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      padding: 10px 5px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .table-row {
+      border-bottom: 2px solid #282E6E;
+      font-weight: 600;
+    }
+
+    .table-row-below {
+      border-bottom: 1px solid #ddd;
+    }
+
+    #nao-tomado {
+      background-color: #D9D9D9;
+      padding: 5px;
+      border-radius: 10px;
+      font-weight: 500;
+    }
+
+    /* RODAPÉ */
+    .rodape {
+      background-color: #1C279C;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    /* RESPONSIVIDADE */
+    @media (max-width: 1200px) {
+      .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navigation-bar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo {
+        height: 60px;
+      }
+
+      .nav-title h2 {
+        font-size: 1.3rem;
+      }
+
+      .menu {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .menu nav {
+        justify-content: center;
+      }
+
+      .card-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .table-row,
+      .table-row-below {
+        font-size: 0.8rem;
+        gap: 5px;
+      }
+
+      .botao-agendar {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navigation-bar {
+        padding: 10px;
+      }
+
+      .nav-title h2 {
+        font-size: 1.1rem;
+      }
+
+      .nav-title p {
+        font-size: 0.8rem;
+      }
+
+      .menu a {
+        font-size: 0.9rem;
+      }
+
+      .cardg-title {
+        font-size: 1rem;
+      }
+
+      .table-row,
+      .table-row-below {
+        font-size: 0.7rem;
+        padding: 8px 2px;
+      }
+
+      .caution-check,
+      .dependent-check {
+        font-size: 14px;
+        padding: 12px;
+      }
+    }
