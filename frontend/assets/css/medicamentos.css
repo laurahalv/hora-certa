@@ -2,6 +2,7 @@
  * {
       margin: 0;
       padding: 0;
+      outline: 0;
       box-sizing: border-box;
       font-family: "Poppins", sans-serif;
     }
@@ -83,6 +84,80 @@
     .perfil-text{
       display: none;
     }
+/*############### MODAL DEPENDENTE ######################## */
+    .modal{
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      overflow: auto;
+      background-color: rgba(0, 0, 0,0.4);
+    }
+
+    .modal .content{
+      background-color: white;
+      margin: 15% auto;
+      padding: 20px;
+      border-radius: 5px;
+      width: 40%;
+      height: 45%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    .modal .content label{
+      width: 70%;
+      padding: 10px;
+    }
+    .modal .content input {
+      width: 70%;
+      padding: 10px 15px;
+      border-radius: 10px;
+      border: 1px solid #dadada;
+    }
+
+    .modal .content .modal-btn{
+      display: flex;
+      margin-top: 30px;
+      width: 70%;
+      gap: 30px;    
+    }
+
+    .modal .content .modal-btn .btn {
+      padding: 10px 20px ;
+      border-radius: 10px;
+      color: white;
+       transition: all 0.3s ease-in;
+       cursor: pointer;
+    }
+    .modal .content .modal-btn .add{
+      background-color: #1C279C;
+      border: 2px solid #1C279C;
+    }
+     .modal .content .modal-btn .back{
+      background-color: #fafafae7;
+      color: #000;
+      border: none;
+    }
+    .modal .content .modal-btn .add:hover{
+     background-color: #fafafafa;
+     border: 1px solid #06a706;
+      color: #06a706;
+    }
+      .modal .content .modal-btn .back:hover{
+     border: 1px solid #ff0000;
+      color: #ff0000;
+    }
+
+
+/*#############################################################*/
     /* CONTEÚDO PRINCIPAL */
     .principal-container {
       display: flex;
@@ -312,6 +387,16 @@
     }
 
     @media (max-width:900px){
+
+      .modal .content h1{
+        font-size: 30px;
+      }
+        .modal .content {
+        width: 60%;
+        height: auto;
+        min-height: 45%;
+        margin: 10% auto;
+    }
       .nav-logo{
         display: none;
       }
@@ -356,7 +441,24 @@
         width: 100%;
         max-width: 300px;
       }
+
+        .modal .content {
+        width: 75%;
+        padding: 25px 20px;
+        margin: 8% auto;
     }
+
+    .modal .content label,
+    .modal .content input,
+    .modal .content .modal-btn {
+        width: 85%;
+    }
+
+    .modal .content .modal-btn {
+        gap: 15px;
+    }
+}
+    
 
     @media (max-width: 600px) {
       .menu{
@@ -426,4 +528,36 @@
         font-size: 14px;
         padding: 12px;
       }
+      .modal .content h1 {
+        font-size: 25px;
+      }
+
+       .modal .content {
+        width: 90%;
+        height: auto;
+        margin: 20% auto;
+        padding: 20px 15px;
+    }
+
+    .modal .content label,
+    .modal .content input,
+    .modal .content .modal-btn {
+        width: 90%;
+    }
+
+    .modal .content input {
+        padding: 12px;
+        font-size: 16px; /* Evita zoom no iOS */
+    }
+
+    .modal .content .modal-btn {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .modal .content .modal-btn .btn {
+        width: 100%;
+        padding: 12px 20px;
+    }
     }

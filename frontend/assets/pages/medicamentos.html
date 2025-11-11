@@ -18,6 +18,7 @@
       rel="stylesheet"
     />
     <script defer src="/frontend/assets/js/menu.js"></script>
+    <script defer src="/frontend/assets/js/addDependente.js"></script>
   </head>
   <body>
     <header>
@@ -71,6 +72,23 @@
        
       </nav>
     </header>
+<!-- MODAL ADD DEPENDENTE -->
+    <div class="modal">
+      <div class="content">
+        <h1>Adicionar Dependente</h1>
+        <label for="Dependente">Nome do Dependente</label>
+        <input type="text" name="Dependente" id="modal-name" placeholder="nome completo">
+
+        <label for="Dependente">Parentesco</label>
+        <input type="text" name="Dependente" id="modal-parent" placeholder="Filho,pai,mãe...">
+
+        <div class="modal-btn">
+          <button class="btn add">Adicionar</button>
+          <button class="btn back">cancelar</button>
+        </div>  
+      </div>
+    </div>
+<!--############################################## -->
 
     <main class="principal-container">
       <div class="principal">
