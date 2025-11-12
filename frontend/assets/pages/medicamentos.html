@@ -19,6 +19,7 @@
     />
     <script defer src="/frontend/assets/js/menu.js"></script>
     <script defer src="/frontend/assets/js/addDependente.js"></script>
+    <script defer src="/frontend/assets/js/addMedicamento.js"></script>
   </head>
   <body>
     <header>
@@ -88,6 +89,30 @@
         </div>  
       </div>
     </div>
+
+      <div class="modal-med">
+        <div class="content-med">
+          <h1>Agendar Medicamento</h1>
+          <label for="Medicamento">Nome do medicamento</label>
+          <input type="text" name="medicamento" id="modal-med-name" placeholder="ex: Losartana">
+
+          <label for="Dose">Dose Diária</label>
+          <input type="text" name="dose" id="modal-med-dose" placeholder="ex: 50mg, 1 comprimido">
+
+          <label for="frequencia">Frequência</label>
+          <input type="text" name="frequencia" id="modal-med-freq" placeholder="Ex: selecione a frequência">
+
+          <label for="horario-dose">Horário da primeira dose</label>
+          <input type="time" name="horario-dose" id="modal-med-horario-dose" placeholder="--:--">
+
+          <div class="modal-btn">
+            <button class="btn-add">Agendar</button>
+            <button class="btn-back">Cancelar</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
 <!--############################################## -->
 
     <main class="principal-container">
@@ -202,45 +227,7 @@
               </div>
 
             </div>
-            <!-- <div class="cardG">
-    
-            </div>
-            <div class="card">
-              <div class="titulo-container">
-                <img
-                  class="logos-img"
-                  src="/frontend/assets/images/relogiologo.png"
-                  alt=""
-                />
-                <p class="cardg-title">Histórico</p>
-              </div>
-
-              <div class="table-container">
-                <div class="table-row">
-                  <p>Medicamentos</p>
-                  <p>Dose</p>
-                  <p>Pessoa</p>
-                  <p>Horário</p>
-                  <p>Status</p>
-                </div>
-
-                <div class="table-row-below">
-                  <p>Vitamina</p>
-                  <p>D1000 UI</p>
-                  <p>Ana Silva</p>
-                  <p>09:00</p>
-                  <p id="nao-tomado">X Não Tomado</p>
-                </div>
-
-                <div id="table-self" class="table-row-below">
-                  <p>Losartana</p>
-                  <p>50mg</p>
-                  <p>Ana Silva</p>
-                  <p>13:00</p>
-                  <p id="nao-tomado" style="text-align: center">Tomado</p>
-                </div>
-              </div>
-            </div> -->
+           
           </div>
         </section>
       </div>
