@@ -65,7 +65,14 @@ a {
   width: auto;
   gap: 20px;
 }
-
+.menu a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+.menu a:hover {
+  opacity: 0.8;
+}
 .perfil {
   height: 70px;
   width: 70px;
@@ -150,7 +157,9 @@ a {
   align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
+#h2-card-content{
+  text-align: center;
+}
 #hangout-img {
   height: 250px;
   border-radius: 150px;
@@ -199,16 +208,11 @@ a {
    FOOTER
    ============================================ */
 .rodape {
-  background-color: #1C279C;
+  background-color: #1c279c;
   color: white;
-  min-height: 100px;
-  display: flex;
-  align-items: center;
-  padding: 20px;
-}
-
-.rodape-texto {
-  margin-left: 160px;
+  padding: 30px;
+  text-align: center;
+  margin-top: 50px;
 }
 
 /* ============================================

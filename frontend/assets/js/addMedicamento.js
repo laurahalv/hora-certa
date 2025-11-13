@@ -1,7 +1,6 @@
 const modalmed = document.querySelector('.modal-med')
 const btnCheckmed = document.querySelector('.botao-agendar')
 const btnCancelmed = document.querySelector('.btn-back')
-    console.log("oi")
 document.addEventListener('click',(e)=>{
     const el = e.target
     
