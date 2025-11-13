@@ -1,0 +1,7 @@
+node_modules
+backend/.env
+package-lock.json
+.env
+# Editor configs
+.vscode/
+.idea/
