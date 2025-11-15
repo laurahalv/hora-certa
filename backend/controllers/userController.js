@@ -1,181 +1,203 @@
-// 1. Importa o Model de User (vamos criar depois)
 import User from '../models/User.js';
+import bcrypt from 'bcrypt';
 
-
-// CRIAR 
+// ========== CADASTRAR USUÁRIO ==========
 export const cadastrarUsuario = async (req, res) => {
   try {
-    const { nome, email, senha, telefone } = req.body;
-    
-    // Verifica se o email já existe
-    const usuarioExistente = await User.findOne({ email });
-    
-    if (usuarioExistente) {
-      return res.status(400).json({
-        sucesso: false,
-        mensagem: 'Este email já está cadastrado'
+    const { nome, email, senha } = req.body;
+
+    // Validação básica
+    if (!nome || !email || !senha) {
+      return res.status(400).json({ 
+        success: false,
+        message: 'Preencha todos os campos!' 
       });
     }
-    
-    // Cria o novo usuário
-    const novoUsuario = await User.create({
+
+    // Verifica se o email já existe
+    const usuarioExiste = await User.findOne({ email });
+    if (usuarioExiste) {
+      return res.status(400).json({ 
+        success: false,
+        message: 'Email já cadastrado!' 
+      });
+    }
+
+    // Criptografa a senha
+    const senhaCriptografada = await bcrypt.hash(senha, 10);
+
+    // Cria o usuário
+    const novoUsuario = new User({
       nome,
       email,
-      senha, 
-      telefone
+      senha: senhaCriptografada
     });
-    
-    // Remove a senha da resposta (segurança)
-    const usuarioSemSenha = novoUsuario.toObject();
-    delete usuarioSemSenha.senha;
-    
+
+    await novoUsuario.save();
+
     res.status(201).json({
-      sucesso: true,
-      mensagem: 'Usuário cadastrado com sucesso!',
-      dados: usuarioSemSenha
+      success: true,
+      message: 'Usuário cadastrado com sucesso!',
+      usuario: {
+        id: novoUsuario._id,
+        nome: novoUsuario.nome,
+        email: novoUsuario.email
+      }
     });
-    
-  } catch (erro) {
-    res.status(400).json({
-      sucesso: false,
-      mensagem: 'Erro ao cadastrar usuário',
-      erro: erro.message
+
+  } catch (error) {
+    console.error('Erro ao cadastrar:', error);
+    res.status(500).json({ 
+      success: false,
+      message: 'Erro ao cadastrar usuário' 
     });
   }
 };
 
-
-// LOGIN 
-
+// ========== LOGIN USUÁRIO ==========
 export const loginUsuario = async (req, res) => {
   try {
     const { email, senha } = req.body;
-    
+
+    // Validação básica
+    if (!email || !senha) {
+      return res.status(400).json({ 
+        success: false,
+        message: 'Preencha todos os campos!' 
+      });
+    }
+
     // Busca o usuário pelo email
     const usuario = await User.findOne({ email });
-    
     if (!usuario) {
-      return res.status(401).json({
-        sucesso: false,
-        mensagem: 'Email ou senha incorretos'
+      return res.status(401).json({ 
+        success: false,
+        message: 'Email ou senha incorretos!' 
       });
     }
-    
-    if (usuario.senha !== senha) {
-      return res.status(401).json({
-        sucesso: false,
-        mensagem: 'Email ou senha incorretos'
+
+    // Verifica a senha
+    const senhaCorreta = await bcrypt.compare(senha, usuario.senha);
+    if (!senhaCorreta) {
+      return res.status(401).json({ 
+        success: false,
+        message: 'Email ou senha incorretos!' 
       });
     }
-    
-    // Remove a senha da resposta
-    const usuarioSemSenha = usuario.toObject();
-    delete usuarioSemSenha.senha;
-    
+
+    // Retorna os dados do usuário (SEM TOKEN)
     res.status(200).json({
-      sucesso: true,
-      mensagem: 'Login realizado com sucesso!',
-      dados: usuarioSemSenha
+      success: true,
+      message: 'Login realizado com sucesso!',
+      usuario: {
+        id: usuario._id,
+        nome: usuario.nome,
+        email: usuario.email
+      }
     });
-    
-  } catch (erro) {
-    res.status(500).json({
-      sucesso: false,
-      mensagem: 'Erro ao fazer login',
-      erro: erro.message
+
+  } catch (error) {
+    console.error('Erro no login:', error);
+    res.status(500).json({ 
+      success: false,
+      message: 'Erro ao fazer login' 
     });
   }
 };
 
-
-// BUSCAR perfil do usuário
-
+// ========== BUSCAR PERFIL ==========
 export const buscarPerfil = async (req, res) => {
   try {
-    // req.params.id vem da URL
-    const usuario = await User.findById(req.params.id).select('-senha');
-    // .select('-senha') = não retorna o campo senha
+    const { id } = req.params;
+    
+    const usuario = await User.findById(id).select('-senha'); // Não retorna a senha
     
     if (!usuario) {
-      return res.status(404).json({
-        sucesso: false,
-        mensagem: 'Usuário não encontrado'
+      return res.status(404).json({ 
+        success: false,
+        message: 'Usuário não encontrado' 
       });
     }
-    
+
     res.status(200).json({
-      sucesso: true,
-      dados: usuario
+      success: true,
+      usuario
     });
-    
-  } catch (erro) {
-    res.status(500).json({
-      sucesso: false,
-      mensagem: 'Erro ao buscar perfil',
-      erro: erro.message
+
+  } catch (error) {
+    console.error('Erro ao buscar perfil:', error);
+    res.status(500).json({ 
+      success: false,
+      message: 'Erro ao buscar perfil' 
     });
   }
 };
 
-
-// ATUALIZAR 
-
+// ========== ATUALIZAR PERFIL ==========
 export const atualizarPerfil = async (req, res) => {
   try {
-    const { nome, telefone } = req.body;
-    
-    // Atualiza apenas nome e telefone (não deixa mudar email/senha aqui)
+    const { id } = req.params;
+    const { nome, email, senha } = req.body;
+
+    const dadosAtualizados = { nome, email };
+
+    // Se estiver mudando a senha, criptografa
+    if (senha) {
+      dadosAtualizados.senha = await bcrypt.hash(senha, 10);
+    }
+
     const usuarioAtualizado = await User.findByIdAndUpdate(
-      req.params.id,
-      { nome, telefone },
+      id,
+      dadosAtualizados,
       { new: true }
     ).select('-senha');
-    
+
     if (!usuarioAtualizado) {
-      return res.status(404).json({
-        sucesso: false,
-        mensagem: 'Usuário não encontrado'
+      return res.status(404).json({ 
+        success: false,
+        message: 'Usuário não encontrado' 
       });
     }
-    
+
     res.status(200).json({
-      sucesso: true,
-      mensagem: 'Perfil atualizado com sucesso!',
-      dados: usuarioAtualizado
+      success: true,
+      message: 'Perfil atualizado com sucesso!',
+      usuario: usuarioAtualizado
     });
-    
-  } catch (erro) {
-    res.status(400).json({
-      sucesso: false,
-      mensagem: 'Erro ao atualizar perfil',
-      erro: erro.message
+
+  } catch (error) {
+    console.error('Erro ao atualizar perfil:', error);
+    res.status(500).json({ 
+      success: false,
+      message: 'Erro ao atualizar perfil' 
     });
   }
 };
 
-// DELETAR usuário
-
+// ========== DELETAR USUÁRIO ==========
 export const deletarUsuario = async (req, res) => {
   try {
-    const usuarioDeletado = await User.findByIdAndDelete(req.params.id);
-    
+    const { id } = req.params;
+
+    const usuarioDeletado = await User.findByIdAndDelete(id);
+
     if (!usuarioDeletado) {
-      return res.status(404).json({
-        sucesso: false,
-        mensagem: 'Usuário não encontrado'
+      return res.status(404).json({ 
+        success: false,
+        message: 'Usuário não encontrado' 
       });
     }
-    
+
     res.status(200).json({
-      sucesso: true,
-      mensagem: 'Usuário deletado com sucesso!'
+      success: true,
+      message: 'Usuário deletado com sucesso!'
     });
-    
-  } catch (erro) {
-    res.status(500).json({
-      sucesso: false,
-      mensagem: 'Erro ao deletar usuário',
-      erro: erro.message
+
+  } catch (error) {
+    console.error('Erro ao deletar usuário:', error);
+    res.status(500).json({ 
+      success: false,
+      message: 'Erro ao deletar usuário' 
     });
   }
 };

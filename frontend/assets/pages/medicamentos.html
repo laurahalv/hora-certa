@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medicamentos</title>
-    <link rel="stylesheet" href="/frontend/assets/css/medicamentos.css" />
+    <link rel="stylesheet" href="/assets/css/medicamentos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,9 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Gotu&display=swap"
       rel="stylesheet"
     />
-    <script defer src="/frontend/assets/js/menu.js"></script>
-    <script defer src="/frontend/assets/js/addDependente.js"></script>
-    <script defer src="/frontend/assets/js/addMedicamento.js"></script>
+    <script defer src="/assets/js/menu.js"></script>
+    <script defer src="/assets/js/addDependente.js"></script>
+    <script defer src="/assets/js/addMedicamento.js"></script>
+    <script defer src="/assets/js/authCheck.js"></script>
   </head>
   <body>
     <header>
@@ -27,7 +28,7 @@
         <div class="nav-logo">
           <img
             class="logo"
-            src="/frontend/assets/images/horacerta-logo.png"
+            src="/assets/images/horacerta-logo.png"
             alt="logo-pilula-medicamento"
           />
            <div class="nav-title">
@@ -41,15 +42,15 @@
 
        
  <div class="menu-mobile">
-           <img class="menu-img" src="/frontend/assets/images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="menu">
+           <img class="menu-img" src="/assets/images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="menu">
         </div>
         <div class="menu" data-open="false">
           <td>
             <tr>
-              <a href="/frontend/assets/pages/home.html">Inicio</a>
+              <a href="/assets/pages/home.html">Inicio</a>
             </tr>
             <tr>
-              <a href="/frontend/assets/pages/medicamentos.html"
+              <a href="/assets/pages/medicamentos.html"
                 >Medicamentos</a
               >
             </tr>
@@ -58,10 +59,10 @@
             </tr>
           </td>
           <div class="boxImg-header">
-            <a href="/frontend/assets/pages/perfil-configs.html"><img class="perfil" src="/frontend/assets/images/perfil.png" alt="perfil" /></a>
+            <a href="/assets/pages/perfil-configs.html"><img class="perfil" src="/assets/images/perfil.png" alt="perfil" /></a>
           </div>
           <div class="perfil-text">
-            <a href="/frontend/assets/pages/perfil-configs.html">Perfil</a>
+            <a href="/assets/pages/perfil-configs.html">Perfil</a>
           </div>
         </div>
 
@@ -120,11 +121,12 @@
           </div>
 
           <div class="card-container">
+
             <div class="card">
                <div class="titulo-container">
                 <img
                   class="logos-img"
-                  src="/frontend/assets/images/relogio.png"
+                  src="/assets/images/relogio.png"
                   alt=""
                 />
                 <p class="cardg-title">Próximos Medicamentos</p>
@@ -132,7 +134,7 @@
                <div class="img-container">
                 <img
                   class="medicamento-img"
-                  src="/frontend/assets/images/medicamento.png"
+                  src="/assets/images/medicamento.png"
                   alt="mediacamento"
                 />
               </div>
@@ -144,30 +146,32 @@
                <div class="titulo-container">
                 <img
                   class="logos-img"
-                  src="/frontend/assets/images/dependentes.png" alt=""
+                  src="/assets/images/dependentes.png" alt=""
                    />
+                     <p class="cardg-title">Dependentes</p>
                   </div>
-                <p class="cardg-title">Dependentes</p>
-              </div>
-
-              <div class="card-content">
+              
+                   <div class="card-content">
                 <div class="p-generico">
                   <p id="content-p">João Silva</p>
                   <p id="p-c">Filho</p>
                 </div>
-
-                <div class="p-generico">
+                 <div class="p-generico">
                   <p id="content-p">Ana Silva</p>
                   <p id="p-c">Filha</p>
                 </div>
+              </div>
+
+           
+
+               
                 <button class="dependent-check">Adicionar Dependentes</button>
               </div>
-            </div>
-            <div class="card">
+                 <div class="card">
                <div class="titulo-container">
                 <img
                   class="logos-img"
-                  src="/frontend/assets/images/caution.png"
+                  src="/assets/images/caution.png"
                   alt=""
                 />
                 <p class="cardg-title">Medicamentos não tomados (1)</p>
@@ -189,7 +193,7 @@
                <div class="titulo-container">
                 <img
                   class="logos-img"
-                  src="/frontend/assets/images/relogiologo.png"
+                  src="/assets/images/relogiologo.png"
                   alt=""
                 />
                 <p class="cardg-title">Histórico</p>
@@ -222,6 +226,8 @@
               </div>
 
             </div>
+            </div>
+         
            
           </div>
         </section>

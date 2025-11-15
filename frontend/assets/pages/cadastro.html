@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/frontend/assets/css/forms.css">
+    <link rel="stylesheet" href="/assets/css/forms.css">
+    <script src="/assets/js/cadastro.js"></script>
     <title>Cadastre-se</title>
 </head>
 <body>
     <div class="container">
         <div class="banner">
             <div class="items">
-            <img src="/frontend/assets/images/logo.png" alt="Logo">
+            <img src="/assets/images/logo.png" alt="Logo">
             <h1>Hora Certa</h1>
             <p>Seu controle de medicamentos inteligente</p>
             </div>
         </div>
         <div class="form">
             <h1>Criar uma Conta</h2>
-            <form action="/registrar" method="POST">
+            <form id="formCadastro" action="/registrar"  method="POST">
                 <label for="name">Nome Completo</label>
                 <input type="text" id="name" name="name" required>
 
@@ -32,7 +33,7 @@
 
                 <button type="submit">Criar conta</button>
             </form>
-            <p>Já tem uma conta? <a href="/frontend/assets/pages/login.html">Entre aqui</a></p>
+            <p>Já tem uma conta? <a href="/assets/pages/login.html">Entre aqui</a></p>
         </div>
     </div>
 
