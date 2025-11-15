@@ -1,25 +1,20 @@
-import express from 'express';
-const router = express.Router();
-
-import {
-  criarMedicamento,
+import express from "express";
+import { 
+  criarMedicamento, 
   listarMedicamentos,
-  buscarMedicamento,
-  atualizarMedicamento,
-  deletarMedicamento
+  listarMedicamentosPorUsuario, // NOVO
+  buscarMedicamento, 
+  atualizarMedicamento, 
+  deletarMedicamento 
 } from '../controllers/medicamentosController.js';
 
+const router = express.Router();
 
-// criar Medicamento
-router.post('/',criarMedicamento)
-// listar todos os medicamentos
-router.get('/',listarMedicamentos)
-// Buscar medicamento especifico
-router.get('/:id', buscarMedicamento)
-// atualizar
-router.put('/:id',atualizarMedicamento)
-// deletar
-router.delete('/:id',deletarMedicamento)
+router.post('/', criarMedicamento);
+router.get('/', listarMedicamentos);
+router.get('/usuario/:usuarioId', listarMedicamentosPorUsuario); // NOVA ROTA
+router.get('/:id', buscarMedicamento);
+router.put('/:id', atualizarMedicamento);
+router.delete('/:id', deletarMedicamento);
 
 export default router;
-

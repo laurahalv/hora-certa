@@ -21,6 +21,7 @@ const medicamentosSchema = mongoose.Schema({
             default: false
         }
     }],
+    usuarioId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
     dataInicio: {
         type: Date,
         default: Date.now

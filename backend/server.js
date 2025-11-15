@@ -8,6 +8,7 @@ import './config/db.js';
 // Importar as rotas
 import medicamentoRoutes from './routes/medicamentosRoutes.js';
 import userRoutes from './routes/userRoutes.js';
+import dependenteRoutes from './routes/dependenteRoutes.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -40,6 +41,7 @@ app.use(express.static(path.join(__dirname, '../frontend')));
 // Rotas da API
 app.use('/api/medicamentos', medicamentoRoutes);
 app.use('/api/usuarios', userRoutes);
+app.use('/api/dependentes', dependenteRoutes); 
 
 // Rotas das páginas HTML
 app.get('/',(req,res)=>{
