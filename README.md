@@ -1,3 +1,12 @@
+Integrantes: 
+ - Larissa Tamires de Araujo Nascimento
+ - Laura Henrique Alves
+ - Luis Fernando Oliveira de Jesus
+ - Maykon Zi Ji Yang
+ - Natalia de Oliveira Fogaça
+ - Nicolas da Silva Ribeiro
+ - Pedro Otavio Santos da Silva.
+
 ---
 
 🕒 Hora Certa
