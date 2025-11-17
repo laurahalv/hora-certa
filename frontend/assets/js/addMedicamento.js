@@ -3,13 +3,13 @@
 const modalmed = document.querySelector('.modal-med');
 const btnCheckmed = document.querySelector('.botao-agendar');
 const btnCancelmed = document.querySelector('.btn-back');
-const btnAdd = document.querySelector('.btn-add');
+const btnAddmed = document.querySelector('.btn-add');
 
 // Pega os inputs do modal
-const inputNome = document.getElementById('modal-med-name');
-const inputDose = document.getElementById('modal-med-dose');
-const inputFrequencia = document.getElementById('modal-med-freq');
-const inputHorario = document.getElementById('modal-med-horario-dose');
+const inputNomeMed = document.getElementById('modal-med-name');
+const inputDoseMed = document.getElementById('modal-med-dose');
+const inputFrequenciaMed = document.getElementById('modal-med-freq');
+const inputHorarioMed = document.getElementById('modal-med-horario-dose');
 
 // Abrir/Fechar modal
 document.addEventListener('click', (e) => {
@@ -37,10 +37,10 @@ modalmed?.addEventListener('click', (e) => {
 
 // Função para limpar o formulário
 function limparFormulario() {
-  if (inputNome) inputNome.value = '';
-  if (inputDose) inputDose.value = '';
-  if (inputFrequencia) inputFrequencia.value = '';
-  if (inputHorario) inputHorario.value = '';
+  if (inputNomeMed) inputNomeMed.value = '';
+  if (inputDoseMed) inputDoseMed.value = '';
+  if (inputFrequenciaMed) inputFrequenciaMed.value = '';
+  if (inputHorarioMed) inputHorarioMed.value = '';
 }
 
 // Função para exibir mensagens
@@ -79,14 +79,14 @@ function exibirMensagem(texto, tipo) {
 }
 
 // Evento de clique no botão "Agendar"
-btnAdd?.addEventListener('click', async (e) => {
+btnAddmed?.addEventListener('click', async (e) => {
   e.preventDefault();
 
   // Pega os valores dos inputs
-  const nome = inputNome?.value.trim();
-  const dose = inputDose?.value.trim();
-  const frequencia = inputFrequencia?.value.trim();
-  const horario = inputHorario?.value;
+  const nome = inputNomeMed?.value.trim();
+  const dose = inputDoseMed?.value.trim();
+  const frequencia = inputFrequenciaMed?.value.trim();
+  const horario = inputHorarioMed?.value;
 
   // Validações
   if (!nome || !dose || !frequencia || !horario) {
@@ -107,9 +107,9 @@ btnAdd?.addEventListener('click', async (e) => {
   const usuario = JSON.parse(usuarioLogado);
 
   // Desabilita o botão
-  const textoOriginal = btnAdd.textContent;
-  btnAdd.disabled = true;
-  btnAdd.textContent = 'Agendando...';
+  const textoOriginal = btnAddmed.textContent;
+  btnAddmed.disabled = true;
+  btnAddmed.textContent = 'Agendando...';
 
   try {
     // Prepara os dados no formato correto
@@ -169,7 +169,7 @@ btnAdd?.addEventListener('click', async (e) => {
     exibirMensagem('Erro de conexão. Verifique se o servidor está rodando.', 'erro');
   } finally {
     // Reabilita o botão
-    btnAdd.disabled = false;
-    btnAdd.textContent = textoOriginal;
+    btnAddmed.disabled = false;
+    btnAddmed.textContent = textoOriginal;
   }
 });
