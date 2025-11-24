@@ -109,26 +109,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
       const data = await response.json();
 
-      if (data.sucesso) {
-        exibirMensagem('Cadastro realizado com sucesso! Redirecionando...', 'sucesso');
-        
-        // Salva os dados do usuário
-        localStorage.setItem('usuario', JSON.stringify(data.dados));
-        localStorage.setItem('logado', 'true');
+   if (data.success) {
+  exibirMensagem('Cadastro realizado com sucesso! Redirecionando...', 'sucesso');
 
-        console.log('✅ Cadastro bem-sucedido:', data.dados);
+  localStorage.setItem('usuario', JSON.stringify(data.usuario));
+  localStorage.setItem('logado', 'true');
 
-        // Limpa o formulário
-        form.reset();
+  form.reset();
 
-        // Redireciona após 1.5 segundos
-        setTimeout(() => {
-          window.location.href = '/medicamentos';
-        }, 1500);
+  setTimeout(() => {
+    window.location.href = '/medicamentos';
+  }, 1500);
 
-      } else {
-        exibirMensagem(data.mensagem || 'Erro ao cadastrar', 'erro');
-      }
+} else {
+  exibirMensagem(data.message || 'Erro ao cadastrar', 'erro');
+}
+
 
     } catch (error) {
       console.error('❌ Erro:', error);
