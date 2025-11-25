@@ -61,7 +61,7 @@ O Hora Certa busca oferecer uma forma acessível e confiável de acompanhar trat
 ---
 
 ### Por Onde Começar 
- - Instalar nvm(GerenNode Version Manager) https://github.com/nvm-sh/nvm
+ - Instalar nvm(Node Version Manager) https://github.com/nvm-sh/nvm
  - Baixar a mesma versão do node que está dentro do arquivo ".nvmrc"
  - em Seguida, baixar as dependencias do projeto com 'npm install' no terminal do projeto
  - Adicionar o arquivo ".env" dentro da pasta backend com o conteudo abaixo:
