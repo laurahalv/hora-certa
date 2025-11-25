@@ -65,6 +65,6 @@ O Hora Certa busca oferecer uma forma acessível e confiável de acompanhar trat
  - Baixar a mesma versão do node que está dentro do arquivo ".nvmrc"
  - em Seguida, baixar as dependencias do projeto com 'npm install' no terminal do projeto
  - Adicionar o arquivo ".env" dentro da pasta backend com o conteudo abaixo:
-   -MONGO=mongodb+srv://po82184_db_user:CEoyeBk7Ky0IF3Ev@medicamentosdb.6bxh0ti.mongodb.net/?appName=MedicamentosDB
+   - MONGO=mongodb+srv://po82184_db_user:CEoyeBk7Ky0IF3Ev@medicamentosdb.6bxh0ti.mongodb.net/?appName=MedicamentosDB
  - Digite no terminal "npm start"
  - Acessar http://localhost:3000 no browser
